@@ -1,75 +1,277 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /** reset para rems - 62.5% = 10px de 16px**/ 
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
 
-
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+/** Globales **/
 .contenedor{
     max-width: 120rem;
     margin: 0 auto;
+    width: 95%;
+}
+h1,h2,h3,h4{
+    font-family: 'PT Sans', sans-serif;
+}
+h2,h3,h4{
+    color: #2c3e50;
+    text-transform: uppercase;
 }
 h1{
     font-size: 3.8rem;
-    
 }
 h2{
-    font-size: 2.0rem;
+    font-size: 3rem;
 }
-h3, h2{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
-    color: #456c69;
-    font-weight: bolder;
-    text-align: center;
-    text-transform: uppercase;
+h3{ 
+    font-size: 3rem;
 }
 img {
-    max-width: 130%;
-}
-/**Header **/
-.site-header.inicio{
-    background-image: url(../img/imagen_1.jpg);
-    background-position: bottom;
-    background-size: cover;
-    height: 70vh;
-    min-height: 40rem;
+    max-width: 100%;
 }
 
+/** Utilidades **/
+
+.centrar-texto {
+    text-align: center;
+}
+.contenido-centrado{
+    max-width: 900px;
+}
+
+/**Header **/
+
+.site-header.inicio{
+    background-image: url(../img/imagen_1.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 90vh;
+    min-height: 60rem;
+}
 .contenido-header{
-    height: 100%;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
 }
-.contenido-header h1{
-    color: #e4dfd6;
-    text-align: end;
-    padding-right: 3rem;
+@media (min-width: 768px) {
+    .contenido-header{
+        height: 100%;
+        align-items: initial;
+    }
 }
-.titulo-motos h1{
+.contenido-header h1, .titulo-motos h1{
     color: #e4dfd6;
-    text-align: end;
-    text-transform: uppercase;
-    font-size: 2.8rem;
+    text-align: center;
+    padding-top: 7rem;
+}
+@media (min-width: 768px) {
+    .contenido-header h1, .titulo-motos h1{
+        color: #e4dfd6;
+        text-align: end;
+        padding-right: 3rem;
+    }
 }
 .barra{
     text-align: right;
-    padding-top: 3rem;
+    padding-top: 6rem;
+}
+@media (min-width: 768px) {
+    .barra{
+        padding-top: 3rem;
+    }
 }
 
-.head-moto{
-    background-image: url(../img/Moto-en-carretera.jpg);
-    background-position: top;
-    background-size: cover;
-    height: 75vh;
-    min-height: 40rem;
-}
 /** Navegacio **/
 
 .navegacion a{
-    color:#e4dfd6;
+    color: #020202;
     text-decoration: none;
-    font-size: 1.8rem;
-    margin-right: 20px;
+    font-size: 2rem;
+    display: block;
 }
+@media (min-width: 768px) {
+    .navegacion a{
+        color:#e4dfd6;
+        display: inline-block;
+        margin-right: 2rem; 
+    }
+}
+
 .navegacion a:hover{
-color: #b91a20 ;
+color: #2a2b2c ;
 }
+
+/**body**/
+.presentacion img{
+    display: block;
+    margin: auto auto;
+    border-radius: 50%;
+    background-size: 100%;
+    height: 15rem;
+    margin-top: 2rem;
+}
+@media (min-width: 768px) {
+    .presentacion img{
+        display: inline-block;
+        background-size: 100%;
+    }
+}
+
+blockquote{
+    color: #777777;
+    font-style: italic;
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+@media (min-width: 768px) {
+    blockquote{
+        float: right;
+        width: 68%;
+        font-size: 2.2rem;
+        padding-top: 30px;        
+    }
+}
+
+.presentacion, 
+.contenido-body, 
+.contenido-isla{
+    text-align: justify;     
+}
+.contenido-body img{
+    padding: 30px 0px;
+    width: 100%;
+}
+.caractiristicas-autos img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+}
+@media (min-width: 768px) {
+    .caractiristicas-autos img{
+        width: 80%;
+    }
+}
+ol{
+    list-style-type: disc;
+    
+}
+/** otras paginas **/
+.head-moto{
+    background-image: url(../img/Moto-en-carretera.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 90vh;
+    min-height: 60rem;
+}
+
+@media (min-width: 768px) {
+    .motocicletas{
+        display: flex;
+        justify-content: space-between; 
+    }
+}
+.motos{
+    text-align: center;
+}
+.motos img{
+    padding-top: 20px;
+    width: 80%; 
+}
+@media (min-width: 768px) {
+    .motos img{
+        height: 40rem;
+        width: 40rem;
+    }
+}
+.mesaje p {
+    display: flex;
+    text-align: center;
+    color: #777777;
+    font-size: 2.8rem;
+    font-style: italic;
+    font-family: times;
+    font-weight: 400;
+    
+}
+.mesaje video{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 500px;
+    max-height: 280px;
+    width: 90%;
+    height: 90%
+}
+
+
+/** Formulario **/
+.comentario {
+    background-color: #ffffff;
+    margin: 20px;
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 768px) {
+    .comentario{
+        max-width: 500px;
+        width: 80%;
+        padding: 20px;
+    }
+}
+legend{
+    font-size: 2rem;
+    color: #8c738d;
+}
+label {
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+}
+input:not([type="submit"]), textarea{
+    padding: 1rem;
+    display: block;
+    width: calc(100% - 30px);
+    background-color: #e1e1e1;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+}
+textarea{
+    height: 15rem;
+}
+
+input[type="submit"]{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem 3rem;
+    border-radius: 10px;
+    background-color: #2c3e50;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+@media (min-width: 768px) {
+    input[type="submit"]{
+        
+    }
+}
+input[type="submit"]:hover{
+background-color: #405a74;
+cursor: pointer;
+}
+/** Footer **/
 .redes-sociales{
     display: flex;
     justify-content: center;
@@ -97,136 +299,8 @@ background-image: url(../img/linkedin.svg);
 .github{
     background-image: url(../img/github.svg);
 }
-/**body**/
-
-.presentacion img{
-    background-repeat: no-repeat;
-    background-position: 50%;
-    border-radius: 50%;
-    background-size: 100%;
-    height: 15rem;
-    width: 15rem;   
-}
-blockquote{
-    float: right;
-    color: #777777;
-    width: 315px;
-    font-size: 2.0rem;
-    font-style: italic;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    padding: 20px;
-    margin-right: 10rem;
-}
-
-.presentacion, .contenido-body, .contenido-isla{
-    text-align: justify;
-    margin: 1rem 10rem;
-    font-size: 1.3rem;
-    font-family: helvetica;
-}
-.contenido-body img{
-    height: 30rem;
-    width: 63rem; 
-    padding: 30px 0px;
-}
-/** otras paginas **/
-.cuerpo-motos{
-    display: flex;
-    justify-content: space-between;
-}
-.motos{
-    
-    text-align: center;
-}
-.motos img{
-    height: 30rem;
-    width: 30rem;
-    padding-top: 20px;
-}
-.caractiristicas-autos img{
-    height: 20rem;
-    width: 35rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 30px;
-
-}
-ol{
-    list-style-type: disc;
-    
-}
-
-.mesaje p {
-    text-align: justify;
-    align-content: center;
-    color: #777777;
-    font-size: 2.8rem;
-    font-style: italic;
-    font-family: times;
-    font-weight: 400;
-}
-.mesaje video{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 500px;
-    height: 280px;
-}
 .pie-de-blog{
     background-color: #2c3e50;
     padding: 40px;
     text-align: center;
-}
-
-/** Formulario **/
-.comentario {
-    background-color: #ffffff;
-    width: 500px;
-    margin: 20px;
-    padding: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-legend{
-    font-size: 2rem;
-    color: #8c738d;
-}
-label {
-    font-weight: 700;
-    text-transform: uppercase;
-    display: block;
-}
-input:not([type="submit"]), textarea{
-    padding: 1rem;
-    display: block;
-    width: calc(100% - 30px);
-    background-color: #e1e1e1;
-    margin-bottom: 2rem;
-    border: none;
-    border-radius: 1rem;
-}
-textarea{
-    height: 15rem;
-}
-.ingresar{
-    background-color: #ffffff;
-    width: 500px;
-    margin: 20px;
-    padding: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-input[type="submit"]{
-    padding: 0.5rem;
-    width: 90px;
-    background-color: #108f00;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-input[type="submit"]:hover{
-background-color: #279584;
 }
